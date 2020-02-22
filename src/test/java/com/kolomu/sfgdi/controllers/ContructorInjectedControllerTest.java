@@ -6,14 +6,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ContructorInjectedControllerTest {
 
-    ContructorInjectedController controller;
+class ConstructorInjectedControllerTest {
+
+    ConstructorInjectedController controller;
 
     @BeforeEach
     void setUp() {
         // here we are acting as the inversion control
-        controller = new ContructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new GreetingServiceImpl());
     }
 
     @Test

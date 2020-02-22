@@ -12,7 +12,7 @@ class PropertyInjectedControllerTest {
 
     @BeforeEach
     void setUp() {
-        // least preffered method of DI
+        // least preferred method of DI
         controller = new PropertyInjectedController();
         controller.greetingService = new GreetingServiceImpl();
     }

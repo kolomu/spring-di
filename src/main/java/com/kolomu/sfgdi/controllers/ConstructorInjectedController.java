@@ -1,11 +1,14 @@
 package com.kolomu.sfgdi.controllers;
 
 import com.kolomu.sfgdi.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
-public class ContructorInjectedController {
+@Controller
+public class ConstructorInjectedController {
     private final GreetingService greetingService;
 
-    public ContructorInjectedController(GreetingService greetingService) {
+    // AUTOWIRED Annotation is optional here!
+    public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
