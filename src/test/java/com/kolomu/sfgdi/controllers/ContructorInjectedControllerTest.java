@@ -1,10 +1,8 @@
 package com.kolomu.sfgdi.controllers;
 
-import com.kolomu.sfgdi.services.GreetingServiceImpl;
+import com.kolomu.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 
 class ConstructorInjectedControllerTest {
@@ -14,7 +12,7 @@ class ConstructorInjectedControllerTest {
     @BeforeEach
     void setUp() {
         // here we are acting as the inversion control
-        controller = new ConstructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new ConstructorGreetingService());
     }
 
     @Test
