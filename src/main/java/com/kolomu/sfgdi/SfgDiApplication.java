@@ -1,9 +1,6 @@
 package com.kolomu.sfgdi;
 
-import com.kolomu.sfgdi.controllers.ConstructorInjectedController;
-import com.kolomu.sfgdi.controllers.MyController;
-import com.kolomu.sfgdi.controllers.PropertyInjectedController;
-import com.kolomu.sfgdi.controllers.SetterInjectedController;
+import com.kolomu.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,6 +11,9 @@ public class SfgDiApplication {
 	public static void main(String[] args) {
 		// This will return an Application Context!
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 		// Asking the spring context to search for controller!
 		// Spring bean naming = ClassName but beginnign with lowercase
