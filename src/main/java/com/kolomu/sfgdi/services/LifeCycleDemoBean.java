@@ -1,4 +1,4 @@
-package com.kolomu.services;
+package com.kolomu.sfgdi.services;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;

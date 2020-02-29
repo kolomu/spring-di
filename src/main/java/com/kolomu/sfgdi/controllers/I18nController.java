@@ -1,6 +1,6 @@
 package com.kolomu.sfgdi.controllers;
 
-import com.kolomu.services.GreetingService;
+import com.kolomu.sfgdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 

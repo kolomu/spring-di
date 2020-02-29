@@ -1,0 +1,32 @@
+package com.kolomu.sfgdi.config;
+
+import com.kolomu.sfgdi.services.GreetingRepository;
+import com.kolomu.sfgdi.services.GreetingService;
+import com.kolomu.sfgdi.services.GreetingServiceFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
+
+@Configuration
+public class GreetingServiceConfig {
+
+    @Bean
+    GreetingServiceFactory greetingServiceFactory(GreetingRepository repository) {
+        return new GreetingServiceFactory(repository);
+    }
+
+    @Bean
+    @Primary
+    @Profile({"default", "en"})
+    GreetingService primaryGreetingService(GreetingServiceFactory greetingServiceFactory) {
+        return greetingServiceFactory.createGreetingService("en");
+    }
+
+    @Bean
+    @Primary
+    @Profile("es")
+    GreetingService I18nSpanishGreetingService(GreetingServiceFactory greetingServiceFactory) {
+        return greetingServiceFactory.createGreetingService("es");
+    }
+}
