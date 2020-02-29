@@ -1,4 +1,4 @@
-package com.kolomu.sfgdi.services;
+package com.kolomu.services;
 
 import org.springframework.stereotype.Service;
 

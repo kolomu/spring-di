@@ -1,13 +1,13 @@
-package com.kolomu.sfgdi.services;
+package com.kolomu.services;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Profile("ES")
+@Profile("EN")
 @Service("i18nService")
-public class I18nSpanishGreetingService implements GreetingService {
+public class I18nEnglishGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hola Amigos - ES";
+        return "Hello in english";
     }
 }

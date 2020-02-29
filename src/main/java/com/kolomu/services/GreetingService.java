@@ -1,4 +1,4 @@
-package com.kolomu.sfgdi.services;
+package com.kolomu.services;
 
 public interface GreetingService {
     String sayGreeting();

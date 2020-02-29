@@ -1,6 +1,6 @@
 package com.kolomu.sfgdi.controllers;
 
-import com.kolomu.sfgdi.services.ConstructorGreetingService;
+import com.kolomu.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

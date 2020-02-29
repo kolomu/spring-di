@@ -1,6 +1,6 @@
 package com.kolomu.sfgdi.controllers;
 
-import com.kolomu.sfgdi.services.GreetingService;
+import com.kolomu.services.GreetingService;
 import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
